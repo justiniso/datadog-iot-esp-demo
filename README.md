@@ -12,9 +12,9 @@ By sending telemetry directly from the ESP microprocessors, the decentralized ar
 
 ## Usage
 
-Usage in application code is simple. You can initialize the Datadog client once and submit metrics. Due to the high cost of establishing a new connection, it is generally recommended to pre-aggregate events before flushing them to Datadog.
+Usage in application code is simple. You can initialize the Datadog client once and submit metrics. Due to the high cost of establishing a new connection, it is generally recommended to pre-aggregate events before flushing them to Datadog on some cadence (e.g. once every 5 minutes).
 
-See the examples director for an example using the client:
+See the examples directory for an example using the client. This example will send a single Datadog metric every 10 seconds:
 
 ```cpp
 #ifdef ESP32
