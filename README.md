@@ -1,10 +1,12 @@
-# Datadog Metrics from ESP IoT devices
+# Monitor ESP IoT devices with Datadog (ESP8266 / ESP32)
 
-This is a demo library for submitting metrics to Datadog from ESP IoT devices (ESP32 / ESP8266 / ESP12). These ESP-based microprocessors are widely used in IoT devices, but usually require a centralized hub running MQTT (with the Datadog Agent) to collect statistics. The hub-based architecture presents some challenges in certain applications:
+![IMG_6175](https://user-images.githubusercontent.com/717862/202780328-f13bdd41-2c79-4e0c-ac54-f5ceabed8b2b.jpg)
+
+This is a demo library for sending metrics to Datadog from ESP-based IoT devices (ESP32 / ESP8266 / ESP12). The [Datadog IoT Agent](https://docs.datadoghq.com/agent/iot/?tab=deb) cannot run on ESP-based microprocessors, but these ESP-based microprocessors are widely used in IoT devices. They usually require a centralized hub running MQTT to collect statistics, but the hub-based architecture presents some challenges in certain applications:
 
 * A second device is needed
-* It is more expensive than cheap ESP chips
-* Hubs are a single point of failure
+* It is more expensive to run a hub than cheap ESP chips
+* Hubs are a single point of failure for all telemetry
 
 By sending telemetry directly from the ESP microprocessors, the decentralized architecture is far better suited for certain applications (e.g. security).
 
